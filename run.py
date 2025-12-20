@@ -6,10 +6,10 @@ from glupredkit.parsers.tidepool_dataset import Parser as TidepoolParser
 from pathlib import Path
 import pandas as pd
 
-DATASETS = [#"DiaTrend",
-            #"OhioT1DM",
-            #"OpenAPS",
-            #"t1dexi",
+DATASETS = ["DiaTrend",
+            "OhioT1DM",
+            "OpenAPS",
+            "t1dexi",
             "Tidepool",
             ]
 RAW_DIR = Path("data/raw")
@@ -86,6 +86,7 @@ def main():
         else:
             raw_path = RAW_DIR / ds
         print(f"Parsing {ds} from {raw_path} ...")
+
         if ds == 'Tidepool':
             for prefix in ['HCL150', 'SAP100', 'PA50']:
                 raw_path_str = str(raw_path) + "/"
@@ -116,13 +117,29 @@ def main():
             processed_path = (PROCESSED_DIR / ds).with_suffix(".parquet")
             merged_df.to_parquet(processed_path)
             print(f"Saved processed {ds} to {processed_path}.")
-        else:
-            df = parser(file_path=raw_path)
-            df = postprocess_df(df)
+        elif ds == 't1dexi':
+            suffixes = ["T1DEXIP.zip", "T1DEXI.zip"]
+            files = [
+                file
+                for file in raw_path.iterdir()
+                if file.is_file() and file.name.endswith(tuple(suffixes))
+            ]
+            for file_path in files:
+                file_path_str = str(file_path)
+                df = parser(file_path=file_path_str)
+                df = postprocess_df(df)
 
+                file_name = 'T1DEXI' if 'T1DEXI.zip' in file_path else 'T1DEXIP'
+                processed_path = (PROCESSED_DIR / file_name).with_suffix(".parquet")
+                df.to_parquet(processed_path)
+                print(f"Saved processed {ds} to {processed_path}.")
+        else:
+            df = parser(file_path=str(raw_path) + "/")
+            df = postprocess_df(df)
             processed_path = (PROCESSED_DIR / ds).with_suffix(".parquet")
             df.to_parquet(processed_path)
             print(f"Saved processed {ds} to {processed_path}.")
+
     return
 
 
