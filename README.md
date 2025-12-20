@@ -8,13 +8,18 @@ A data processing tool for converting **Data Use Agreement-governed datasets** i
 
 This module standardizes diabetes-related datasets into a unified format compatible with the MetaboNet ecosystem. It processes continuous glucose monitoring (CGM), insulin delivery, meal, and physiological data from multiple research datasets.
 
-## Supported Datasets
+## Supported Datasets and Access
 
-- **DiaTrend**: Diabetes technology and continuous glucose monitoring data
-- **OhioT1DM**: Ohio T1DM Dataset for blood glucose level prediction
-- **OpenAPS**: Real-world data from OpenAPS users
-- **T1DEXI**: Type 1 Diabetes Exercise Initiative dataset
-- **Tidepool Data Donation**: JDRF real-world evidence study data
+Raw datasets must be obtained through their respective data sharing agreements:
+
+- **DiaTrend**: [Nature Scientific Data publication](https://www.nature.com/articles/s41597-023-02469-5)
+- **OhioT1DM**: Available through [OhioT1DM Dataset](http://smarthealth.cs.ohio.edu/OhioT1DM-dataset.html)
+- **OpenAPS**: Request access through [OpenAPS Data Commons](https://openaps.org/outcomes/data-commons/)
+- **T1DEXI**: Apply through [Vivli T1D Exercise Data RFP](https://vivli.org/t1d-exercise-data-rfp-from-helmsley-charitable-trust-due-the-end-of-this-month/)
+- **Tidepool**: Access through [Tidepool Big Data Donation](https://www.tidepool.org/bigdata)
+
+> **Important**: Each dataset requires separate approval. Follow institutional guidelines for data use agreements.
+
 
 ## Prerequisites
 
@@ -45,17 +50,6 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-## Data Access
-
-Raw datasets must be obtained through their respective data sharing agreements:
-
-- **DiaTrend**: [Nature Scientific Data publication](https://www.nature.com/articles/s41597-023-02469-5)
-- **OhioT1DM**: Available through [OhioT1DM Dataset](http://smarthealth.cs.ohio.edu/OhioT1DM-dataset.html)
-- **OpenAPS**: Request access through [OpenAPS Data Commons](https://openaps.org/outcomes/data-commons/)
-- **T1DEXI**: Apply through [Vivli T1D Exercise Data RFP](https://vivli.org/t1d-exercise-data-rfp-from-helmsley-charitable-trust-due-the-end-of-this-month/)
-- **Tidepool**: Access through [Tidepool Big Data Donation](https://www.tidepool.org/bigdata)
-
-> **Important**: Each dataset requires separate approval. Follow institutional guidelines for data use agreements.
 
 ## Data Preparation
 
@@ -109,11 +103,11 @@ Currently active datasets can be modified in `run.py`:
 
 ```python
 DATASETS = [
-    "DiaTrend",    # Uncomment to process
-    "OhioT1DM",    # Uncomment to process
-    "OpenAPS",     # Uncomment to process
-    "t1dexi",      # Uncomment to process
-    "Tidepool",    # Currently enabled
+    "DiaTrend",  
+    "OhioT1DM",  
+    "OpenAPS",   
+    "t1dexi",    
+    "Tidepool", 
 ]
 ```
 
