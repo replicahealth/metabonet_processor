@@ -97,19 +97,6 @@ The harmonization process converts datasets into a single table with:
 
 For the complete list of features and schema details, see the [MetaboNet website](https://metabo-net.org/).
 
-## Configuration
-
-Currently active datasets can be modified in `run.py`:
-
-```python
-DATASETS = [
-    "DiaTrend",  
-    "OhioT1DM",  
-    "OpenAPS",   
-    "t1dexi",    
-    "Tidepool", 
-]
-```
 
 ## Troubleshooting
 
