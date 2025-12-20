@@ -1,0 +1,7 @@
+glupredkit
+psutil
+isodate
+xport
+pyarrow
+fastparquet
+openpyxl
