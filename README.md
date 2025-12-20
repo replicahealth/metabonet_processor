@@ -20,8 +20,8 @@ First, create and activate a **virtual environment** using the desired Python ve
 ### Using Python 3.9–3.11:
 
 ```bash
-# Create a virtual environment named 'venv' with a specific Python version
-python3.11.7 -m venv venv
+# Create a virtual environment named 'venv' 
+python -m venv venv
 
 # Activate the virtual environment
 # On macOS/Linux
@@ -35,9 +35,10 @@ source venv/bin/activate
 
 Make and activate virtual environment.
 
+```
 pip install -r requirements.txt
+```
 
-Notes: requires python 3.6-3.10.
 
 
 ## 2. Prepare the Raw Data
@@ -69,5 +70,5 @@ The script will process all datasets located in `data/raw` and save the output t
 ## Citation
 
 To cite this work please use:
-TO DO!
+[LINK WILL COME WHEN MANUSCRIPT IS PUBLISHED]
 
