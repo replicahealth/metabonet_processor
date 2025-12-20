@@ -5,3 +5,4 @@ xport
 pyarrow
 fastparquet
 openpyxl
+pandas
