@@ -42,13 +42,13 @@ def postprocess_df(df: pd.DataFrame) -> pd.DataFrame:
     Adjust this based on your expected schema.
     """
     expected_order = [
-        'CGM', 'absorption_time', 'acceleration', 'age', 'air_temp', 'basal', 'bolus', 'calories_burned',
-        'carbs', 'cgm_device', 'context_description_cache', 'date', 'galvanic_skin_response', 'heartrate',
+        'CGM', 'age', 'air_temp', 'basal', 'bolus', 'calories_burned',
+        'carbs', 'cgm_device', 'misc_notes', 'date', 'galvanic_skin_response', 'heartrate',
         'height', 'id', 'insulin', 'insulin_delivery_algorithm', 'insulin_delivery_device',
         'insulin_delivery_modality', 'insulin_type_basal', 'insulin_type_bolus', 'is_pregnant', 'is_test',
-        'meal_label', 'scheduled_basal', 'skin_temp', 'source_file', 'steps', 'tag', 'weight',
+        'meal_label', 'skin_temp', 'source_file', 'steps', 'weight',
         'workout_duration', 'workout_intensity', 'workout_label', 'treatment_group', 'randomization_date',
-        'extension_date', 'gender', 'age_of_diagnosis', 'TDD', 'ethnicity'
+        'extension_date', 'gender', 'age_of_diagnosis', 'ethnicity', 'subject_split_across_traintest'
     ]
 
     print(df.head())
