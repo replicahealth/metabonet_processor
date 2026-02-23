@@ -13,9 +13,9 @@ This module standardizes diabetes-related datasets into a unified format compati
 Raw datasets must be obtained through their respective data sharing agreements:
 
 - **DiaTrend**: [Nature Scientific Data publication](https://www.nature.com/articles/s41597-023-02469-5)
-- **OhioT1DM**: Available through [OhioT1DM Dataset](http://smarthealth.cs.ohio.edu/OhioT1DM-dataset.html)
+- **OhioT1DM**: Available through [OhioT1DM Dataset](https://webpages.charlotte.edu/rbunescu/data/ohiot1dm/OhioT1DM-dataset.html)
 - **OpenAPS**: Request access through [OpenAPS Data Commons](https://openaps.org/outcomes/data-commons/)*
-- **T1DEXI**: Apply through [Vivli T1D Exercise Data RFP](https://vivli.org/t1d-exercise-data-rfp-from-helmsley-charitable-trust-due-the-end-of-this-month/)
+- **T1DEXI**: Apply through [Vivli T1D Exercise Data RFP](https://search.vivli.org/?search=t1dexi)
 - **Tidepool**: Access through [Tidepool Big Data Donation](https://www.tidepool.org/bigdata)
 
 > **Important**: Each dataset requires separate approval. Follow institutional guidelines for data use agreements.
